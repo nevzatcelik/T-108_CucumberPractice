@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import pages.Us001Page;
+import utilities.ConfigReader;
 import utilities.Driver;
 
 import java.security.Key;
@@ -39,7 +40,7 @@ public class US001StepDefinitions {
 
     @Then("Arama Kutusuna karsilastirma yapmak istedigi {string} para birimlerini girer")
     public void aramaKutusunaKarsilastirmaYapmakIstedigiParaBirimleriniGirer(String karsilastirilacakPara) {
-        page.googleSearchBox.sendKeys(karsilastirilacakPara+Keys.ENTER);
+        page.googleSearchBox.sendKeys((karsilastirilacakPara)+Keys.ENTER);
     }
 
     @Then("Kullanici sayfayi kapatir")
