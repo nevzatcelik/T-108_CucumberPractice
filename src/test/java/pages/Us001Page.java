@@ -1,5 +1,6 @@
 package pages;
 
+import org.apache.commons.compress.compressors.pack200.Pack200Utils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -13,4 +14,10 @@ public class Us001Page {
 
      @FindBy(xpath = "//*[text()='Reject all']")
     public WebElement cokkies;
+
+    @FindBy(xpath = "//input[@class='gLFyf']")
+    public WebElement googleSearchBox;
+
+    @FindBy(xpath = "//span[@class='DFlfde SwHCTb']")
+    public WebElement paraKarsilastirmasi;
 }

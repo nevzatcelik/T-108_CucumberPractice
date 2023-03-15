@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="1.268">
-    <testcase classname="US001 TEST" name="Kullanici ilgili sayfaya gider" time="1.258">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="10.737">
+    <testcase classname="Google Arama Testi" name="Kullanici google sitesinde dolar to euro karsilastirmasi yapabilmeli" time="4.507">
         <system-out>
-            <![CDATA[Given Kullanici Amazon sayfasina gider......................................passed
+            <![CDATA[Given Kullanici google sayfasina gider......................................passed
+Then Cokkies i google sayfasinda kabul eder.................................passed
+Then Arama Kutusuna karsilastirma yapmak istedigi "dollar to euro" para birimlerini girer.passed
+Then Para birimlerinin karsilastirmasini alir...............................passed
+Then Verilen degerlerin 1 den kucuk oldugunu dogrular.......................passed
+Then Kullanici sayfayi kapatir..............................................passed
 ]]>
         </system-out>
+    </testcase>
+    <testcase classname="Google Arama Testi" name="T108 istenilen karsilastirmayi yapabilmeli" time="3.691">
+        <system-out>
+            <![CDATA[Given Kullanici google sayfasina gider......................................passed
+Then Cokkies i google sayfasinda kabul eder.................................passed
+Then Arama Kutusuna karsilastirma yapmak istedigi "Tl to Euro" para birimlerini girer.passed
+Then Para birimlerinin karsilastirmasini alir...............................passed
+Then Verilen degerlerin 2 den kucuk oldugunu dogrular.......................passed
+Then Kullanici sayfayi kapatir..............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Google Arama Testi" name="Nevzat istenilen karsilastirmayi yapsin" time="2.301">
+        <failure message="" type="java.lang.AssertionError">
+            <![CDATA[Given Kullanici google sayfasina gider......................................passed
+Then Cokkies i google sayfasinda kabul eder.................................passed
+Then Arama Kutusuna karsilastirma yapmak istedigi "Zloty to Tl" para birimlerini girer.passed
+Then Para birimlerinin karsilastirmasini alir...............................passed
+Then Verilen degerlerin 4 den kucuk oldugunu dogrular.......................failed
+Then Kullanici sayfayi kapatir..............................................skipped
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.US001StepDefinitions.verilenDegerlerinDenKucukOldugunuDogrular(US001StepDefinitions.java:52)
+	at ✽.Verilen degerlerin 4 den kucuk oldugunu dogrular(file:///C:/Users/ahmet/IdeaProjects/T-108_CucumberPractice/src/test/resources/features/googleTest.feature:23)
+]]>
+        </failure>
     </testcase>
 </testsuite>
